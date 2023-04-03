@@ -56,19 +56,19 @@
             </ul>
         </div>
         <div class="column">
-            <h2>TechCrunch</h2>
+            <h2>Hacker News</h2>
             <hr>
             <ul class="headlines">
-                {% for entry in techcrunch_headlines %}
+                {% for entry in hn_headlines %}
                 <li><a href="{{ entry.link }}" style="color:orange">{{ entry.title }}</a></li>
                 {% endfor %}
             </ul>
         </div>
         <div class="column">
-            <h2>Hacker News</h2>
+            <h2>Politico</h2>
             <hr>
             <ul class="headlines">
-                {% for entry in hn_headlines %}
+                {% for entry in politico_headlines %}
                 <li><a href="{{ entry.link }}" style="color:orange">{{ entry.title }}</a></li>
                 {% endfor %}
             </ul>
