@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    background-color: black;
+    padding-left: 30px; /* Add padding to the left side */
+}
+
+.container {
+    margin: auto;
+    width: 70%;
+    padding: 20px;
+    padding-left: 50px;
+}
+
+h1 {
+    font-size: 32px;
+    color: orange;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 26px;
+    color: orange;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 20px;
+    color: orange;
+    margin-bottom: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: orange;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 5px; /* Decrease the distance between headlines */
+    line-height: 1.5;
+    color: orange;
+}
+
+.dot {
+    color: orange;
+    font-size: 22px;
+    margin-right: 10px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.publication {
+    color: orange;
+    border-bottom: 2px solid orange;
+    display: inline-block;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    margin-left: 10px;
+}
+
+.date {
+    font-size: 18px;
+    color: orange;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.line {
+    border-bottom: 2px solid orange;
+    margin-left: 10px;
+    border-color: orange; /* Set the border color to orange */
+}

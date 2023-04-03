@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="header">
+        <h1 class="logo">{{ date }}</h1>
+    </div>
+    <div class="row">
+        <div class="column">
+            <h2>BBC News</h2>
+            <hr>
+            <ul class="headlines">
+                {% for entry in bbc_headlines %}
+                <li><a href="{{ entry.link }}" style="color:orange">{{ entry.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="column">
+            <h2>New York Times</h2>
+            <hr>
+            <ul class="headlines">
+                {% for entry in nyt_headlines %}
+                <li><a href="{{ entry.link }}" style="color:orange">{{ entry.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="column">
+            <h2>Financial Times</h2>
+            <hr>
+            <ul class="headlines">
+                {% for entry in ft_headlines %}
+                <li><a href="{{ entry.link }}" style="color:orange">{{ entry.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="column">
+            <h2>The Economist</h2>
+            <hr>
+            <ul class="headlines">
+                {% for entry in economist_headlines %}
+                <li><a href="{{ entry.link }}" style="color:orange">{{ entry.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="column">
+            <h2>Foreign Policy</h2>
+            <hr>
+            <ul class="headlines">
+                {% for entry in fp_headlines %}
+                <li><a href="{{ entry.link }}" style="color:orange">{{ entry.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="column">
+            <h2>TechCrunch</h2>
+            <hr>
+            <ul class="headlines">
+                {% for entry in techcrunch_headlines %}
+                <li><a href="{{ entry.link }}" style="color:orange">{{ entry.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="column">
+            <h2>Hacker News</h2>
+            <hr>
+            <ul class="headlines">
+                {% for entry in hn_headlines %}
+                <li><a href="{{ entry.link }}" style="color:orange">{{ entry.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <script>
+        const title = document.querySelector("title");
+        const today = new Date();
+        const options = {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
+        const formattedDate = today.toLocaleDateString("en-US", options);
+        title.innerText = "Headlines for " + formattedDate;
+        document.querySelector(".logo").innerText = "News Headlines for " + formattedDate;
+    </script>
+</body>
+</html>
